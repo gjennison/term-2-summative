@@ -15,6 +15,12 @@ for (let i = 0; i < partySize.length; i++) {
         partySize[x].classList.add("inactive");
       }
     }
+
+    if (partySize[i].classList.contains("active") && arrival && leave) {
+      forwardButton.classList.remove("disabled");
+    } else {
+      forwardButton.classList.add("disabled");
+    }
   });
 }
 
@@ -25,6 +31,8 @@ function landingPageChange() {
     differenceInTime = leave.getDate().getTime() - arrival.getDate().getTime();
 
   differenceInTime = differenceInTime / 1000 / 60 / 60 / 24;
+
+  forwardButton.classList.add("disabled");
 
   masterAccomInit();
 }

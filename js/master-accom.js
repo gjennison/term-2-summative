@@ -1,22 +1,22 @@
-let options = document.querySelectorAll(".master-accom h2");
+let options = document.querySelectorAll("#master-accom h2");
 
 function masterAccomInit() {
   //   UPDATE STATUS
-  document.querySelector(".master-accom span:first-child").innerHTML = people;
+  document.querySelector("#master-accom span:first-child").innerHTML = people;
 
   if (people > 1)
-    document.querySelector(".master-accom span:nth-child(2)").innerHTML =
+    document.querySelector("#master-accom span:nth-child(2)").innerHTML =
       "people";
   else
-    document.querySelector(".master-accom span:nth-child(2)").innerHTML =
+    document.querySelector("#master-accom span:nth-child(2)").innerHTML =
       "person";
 
   document.querySelector(
-    ".master-accom span:nth-child(3)"
+    "#master-accom span:nth-child(3)"
   ).innerHTML = differenceInTime;
 
   if (differenceInTime > 1)
-    document.querySelector(".master-accom span:last-child").innerHTML = "s";
+    document.querySelector("#master-accom span:last-child").innerHTML = "s";
 
   // CALCULATE WHICH ACCOMMODATION OPTIONS ARE AVAILABLE
   if (
@@ -65,6 +65,8 @@ function masterAccomInit() {
     options[3].classList.remove("active-a");
     options[3].classList.add("inactive-a");
   }
+
+  forwardButton.classList.add("disabled");
 }
 
 for (let i = 0; i < options.length; i++) {
@@ -79,6 +81,17 @@ for (let i = 0; i < options.length; i++) {
       if (options[i].classList.contains("selected-master"))
         options[i].classList.remove("selected-master");
       else options[i].classList.add("selected-master");
+
+      forwardButton.classList.remove("disabled");
     }
   });
+}
+
+function checkIfMasterActive() {
+  let bool = false;
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].classList.contains("selected-master")) bool = true;
+  }
+
+  if (!bool) forwardButton.classList.add("disabled");
 }

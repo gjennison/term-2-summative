@@ -51,20 +51,30 @@ html {
     text-align: center;
     padding: 8px;
     cursor: pointer;
+    transition: color 0.4s;
     &:hover {
       background-color: aliceblue;
     }
   }
 }
 
-.master-accom,
-.sub-accom,
-.food,
-.summary,
-.payment {
+.final-page-arrow {
+  background-color: rgba(190, 255, 180, 0.8);
+}
+
+.disabled {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#master-accom,
+#sub-accom,
+#food,
+#summary,
+#payment {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 80vh;
+  width: 100vw;
 }

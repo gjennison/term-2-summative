@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section class="landing">
+    <section id="landing">
       <h1>Booking</h1>
       <h3>How many people?</h3>
       <div class="partySize">
@@ -29,7 +29,7 @@
       </div>
     </section>
 
-    <section class="master-accom">
+    <section id="master-accom">
       <h4>
         For <span></span> <span>person</span> and <span></span> night<span
         ></span>
@@ -40,8 +40,8 @@
       <h2>Motel</h2>
       <h2>House</h2>
     </section>
-    <section class="sub-accom"></section>
-    <section class="food">
+    <section id="sub-accom"></section>
+    <section id="food">
       <div class="food-choice">
         <input type="checkbox" />
         <h2>Breakfast $10</h2>
@@ -55,11 +55,11 @@
         <h2>Dinner $25</h2>
       </div>
     </section>
-    <section class="summary">
+    <section id="summary">
       <h1>Summary</h1>
       <div class="summary-content"></div>
     </section>
-    <section class="payment">
+    <section id="payment">
       <form>
         <div class="form-group name">
           <label for="owner">Name on card</label>
@@ -110,7 +110,7 @@
       </form>
     </section>
 
-    <section class="success">
+    <section id="success">
       <div class="success-content">
         <i class="fas fa-times"></i>
         <h1>Success!</h1>
@@ -119,10 +119,11 @@
     </section>
 
     <div class="page-arrows">
-      <i id="backButton" class="fas fa-arrow-left"></i>
-      <i id="forwardButton" class="fas fa-arrow-right"></i>
+      <i id="backButton" class="fas fa-arrow-left disabled"></i>
+      <i id="forwardButton" class="fas fa-arrow-right disabled"></i>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="js/anime.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/landing.js"></script>
     <script src="js/master-accom.js"></script>

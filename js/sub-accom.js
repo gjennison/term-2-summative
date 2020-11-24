@@ -29,8 +29,22 @@ function selectAccom(type, x) {
     if (y === x) {
       if (items[y].classList.contains("selected-sub"))
         items[y].classList.remove("selected-sub");
-      else items[y].classList.add("selected-sub");
+      else {
+        items[y].classList.add("selected-sub");
+        forwardButton.classList.remove("disabled");
+      }
     } else items[y].classList.remove("selected-sub");
     console.log(items[x].classList);
   }
+}
+
+function checkIfSubActive() {
+  let items = document.querySelectorAll(".item");
+
+  let bool = false;
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].classList.contains("selected-sub")) bool = true;
+  }
+
+  if (!bool) forwardButton.classList.add("disabled");
 }

@@ -6,13 +6,13 @@ let nameReg = new RegExp("^[a-zA-Z' -]+$");
 let cvvReg = new RegExp("^[0-9][0-9][0-9]$");
 
 // DOM ELEMENTS
-let nameOnCard = document.querySelector(".payment .name input");
+let nameOnCard = document.querySelector("#payment .name input");
 let CVV = document.querySelector(".CVV input");
 let cardNumber = document.querySelector("#card-number-field input");
 let cardIMG = document.querySelector("#credit_cards img");
-let confirm = document.querySelector(".payment p");
+let confirm = document.querySelector("#payment p");
 
-let success = document.querySelector(".success");
+let success = document.querySelector("#success");
 let successClose = document.querySelector("i:first-child");
 let successContent = document.querySelector(".success-content");
 
@@ -82,8 +82,14 @@ confirm.addEventListener("click", () => {
       visa.test(cardNumber.value) ||
       amex.test(cardNumber.value) ||
       mastercard.test(cardNumber.value)
-    )
+    ) {
       success.style.display = "flex";
+      successContent.style.transform = "scale(0.8)";
+      anime({
+        targets: ".success-content",
+        scale: 1.2,
+      });
+    }
   }
 });
 

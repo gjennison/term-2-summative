@@ -11,13 +11,15 @@ let runningTotal = {
 
 // SECTIONS
 let sections = [
-  { title: "landing", dom: document.querySelector(".landing") },
-  { title: "master-accom", dom: document.querySelector(".master-accom") },
-  { title: "sub-accom", dom: document.querySelector(".sub-accom") },
-  { title: "food", dom: document.querySelector(".food") },
-  { title: ".summary", dom: document.querySelector(".summary") },
-  { title: ".payment", dom: document.querySelector(".payment") },
+  { title: "landing", dom: document.querySelector("#landing") },
+  { title: "master-accom", dom: document.querySelector("#master-accom") },
+  { title: "sub-accom", dom: document.querySelector("#sub-accom") },
+  { title: "food", dom: document.querySelector("#food") },
+  { title: ".summary", dom: document.querySelector("#summary") },
+  { title: ".payment", dom: document.querySelector("#payment") },
 ];
+
+let sectionsDOM = document.querySelectorAll("section");
 
 // ACCOMMODATION OPTIONS
 let accom = [
@@ -47,11 +49,68 @@ let backButton = document.querySelector("#backButton");
 let forwardButton = document.querySelector("#forwardButton");
 
 backButton.addEventListener("click", () => {
-  changePage(false);
+  if (page === 0 || backButton.classList.contains("disabled")) {
+    anime({
+      targets: "#backButton",
+      translateX: 10,
+      direction: "alternate",
+      duration: 100,
+      easing: "easeInOutSine",
+    });
+  } else {
+    anime({
+      targets: "#backButton",
+      scale: 1.04,
+      direction: "alternate",
+      duration: 100,
+      easing: "easeInOutSine",
+    });
+  }
+  if (!backButton.classList.contains("disabled")) changePage(false);
+
+  sectionsDOM[page].style.position = "absolute";
+  sectionsDOM[page].style.left = "-100px";
+  anime({
+    targets: "#" + sectionsDOM[page].id,
+    left: -0,
+  });
 });
 
 forwardButton.addEventListener("click", () => {
-  changePage(true);
+  if (page === 5 || forwardButton.classList.contains("disabled")) {
+    anime({
+      targets: "#forwardButton",
+      translateX: -10,
+      direction: "alternate",
+      duration: 100,
+      easing: "easeInOutSine",
+    });
+  } else {
+    anime({
+      targets: "#forwardButton",
+      scale: 1.04,
+      direction: "alternate",
+      duration: 100,
+      easing: "easeInOutSine",
+    });
+  }
+
+  if (!forwardButton.classList.contains("disabled")) changePage(true);
+
+  if (page == 1) checkIfMasterActive();
+
+  if (page == 2) checkIfSubActive();
+
+  for (let i = 0; i < sectionsDOM.length - 1; i++) {}
+
+  let target = "#" + sectionsDOM[page].id;
+
+  sectionsDOM[page].style.position = "absolute";
+  sectionsDOM[page].style.left = "100px";
+  anime({
+    targets: "#" + sectionsDOM[page].id,
+    left: -0,
+  });
 });
 
 function changePage(forwards) {
@@ -68,4 +127,10 @@ function changePage(forwards) {
   if (page == 1) landingPageChange();
 
   if (page == 4) summaryUpdate();
+
+  if (page != 0) backButton.classList.remove("disabled");
+  else backButton.classList.add("disabled");
+
+  if (page != 5) forwardButton.classList.remove("disabled");
+  else forwardButton.classList.add("disabled");
 }

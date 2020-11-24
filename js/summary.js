@@ -1,8 +1,8 @@
 function summaryUpdate() {
   let content = document.querySelector(".summary-content");
-  let peopleAndNights = document.querySelector(".master-accom h4").innerHTML;
+  let peopleAndNights = document.querySelector("#master-accom h4").innerHTML;
   let nights = parseInt(
-    document.querySelector(".master-accom h4 span:nth-child(3)").innerHTML
+    document.querySelector("#master-accom h4 span:nth-child(3)").innerHTML
   );
   let foodSelection = runningTotal.foodSelection;
 
