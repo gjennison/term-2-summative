@@ -1,0 +1,30 @@
+.active-a {
+  cursor: pointer;
+}
+
+.inactive-a {
+  color: white;
+  user-select: none;
+}
+
+.selected-master {
+  background-color: rgba(190, 255, 200, 0.8);
+}
+
+.master-accom {
+  h2 {
+    border: 1px solid rgba(119, 0, 145, 0.8);
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 12px;
+    &:hover {
+      // background-color: rgba(180, 247, 64, 0.6);
+      background-color: rgba(190, 255, 180, 0.8);
+
+      // background-color: aliceblue;
+    }
+  }
+}

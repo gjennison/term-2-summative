@@ -1,0 +1,70 @@
+@import "modules/landing", "modules/master-accom", "modules/sub-accom",
+  "modules/food", "modules/payment", "modules/summary";
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  // background: rgb(34, 193, 195);
+  // background: linear-gradient(
+  //   0deg,
+  //   rgba(34, 193, 195, 1) 0%,
+  //   rgba(253, 187, 45, 1) 100%
+  // );
+  background: linear-gradient(
+      217deg,
+      rgba(180, 247, 64, 0.6),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(152, 100, 167, 0.7), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(27, 171, 92, 0.6), rgba(0, 0, 255, 0) 70.71%);
+  background-size: 800% 800%;
+  background-position: top left;
+  animation: background 12s infinite;
+  color: rgba(119, 0, 145, 0.8);
+  margin: 0;
+}
+
+@keyframes background {
+  25% {
+    background-position: top right;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  75% {
+    background-position: 0% 90%;
+  }
+  99% {
+    background-position: top left;
+  }
+}
+
+.page-arrows {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 2.5em;
+
+  i {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    &:hover {
+      background-color: aliceblue;
+    }
+  }
+}
+
+.master-accom,
+.sub-accom,
+.food,
+.summary,
+.payment {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}

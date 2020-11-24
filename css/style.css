@@ -1,0 +1,408 @@
+.landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing h1 {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.landing .partySize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.landing .partySize div {
+  cursor: pointer;
+  text-align: center;
+  padding: 16px;
+  width: 100%;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.landing .partySize div:hover {
+  background-color: #beffc8;
+}
+
+.landing .dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing .dates input {
+  max-width: 30%;
+  margin: 4px;
+}
+
+.active {
+  background-color: rgba(180, 247, 64, 0.9);
+}
+
+.inactive {
+  background-color: aliceblue;
+}
+
+.active-a {
+  cursor: pointer;
+}
+
+.inactive-a {
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.selected-master {
+  background-color: rgba(190, 255, 200, 0.8);
+}
+
+.master-accom h2 {
+  border: 1px solid rgba(119, 0, 145, 0.8);
+  border-radius: 8px;
+  width: 80%;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 12px;
+}
+
+.master-accom h2:hover {
+  background-color: rgba(190, 255, 180, 0.8);
+}
+
+.sub-accom .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.sub-accom .item img {
+  width: 45%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sub-accom .item .content {
+  padding: 24px;
+}
+
+.sub-accom .item:hover {
+  background-color: aliceblue;
+}
+
+.selected-sub {
+  background-color: aliceblue;
+}
+
+.food .food-choice {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid rgba(119, 0, 145, 0.8);
+  border-radius: 8px;
+  width: 60%;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 12px;
+}
+
+.food .food-choice:hover {
+  background-color: rgba(190, 255, 180, 0.8);
+}
+
+.food .food-choice input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 25px;
+  width: 25px;
+  appearance: none;
+  border: 1px solid #770091;
+  border-radius: 4px;
+  outline: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.food .food-choice input:checked {
+  background-color: rgba(180, 247, 64, 0.4);
+}
+
+.payment {
+  display: none;
+  height: 100vh;
+  margin: auto;
+}
+
+.payment form {
+  margin-top: 10%;
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.payment form input {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.payment form img {
+  overflow: hidden;
+}
+
+.payment form #credit_cards {
+  width: 100px;
+  height: 120px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment form #credit_cards img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.payment form p {
+  padding: 16px;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+}
+
+.payment form p:hover {
+  background-color: rgba(0, 150, 50, 0.5);
+}
+
+.payment-valid {
+  border: 1px solid green;
+}
+
+.payment-invalid {
+  border: 1px solid crimson;
+}
+
+.payment-default {
+  border: 1px solid lightgrey;
+}
+
+.success {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.success .success-content {
+  height: 40%;
+  width: 60%;
+  background-color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.success .success-content i {
+  font-size: 2em;
+}
+
+.success .success-content i:first-child {
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-right: 24px;
+}
+
+.success .success-content i:last-child {
+  color: green;
+}
+
+.summary .summary-content {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.summary .summary-content img {
+  width: 120px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(217deg, rgba(180, 247, 64, 0.6), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(152, 100, 167, 0.7), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(27, 171, 92, 0.6), rgba(0, 0, 255, 0) 70.71%);
+  background-size: 800% 800%;
+  background-position: top left;
+  -webkit-animation: background 12s infinite;
+          animation: background 12s infinite;
+  color: rgba(119, 0, 145, 0.8);
+  margin: 0;
+}
+
+@-webkit-keyframes background {
+  25% {
+    background-position: top right;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  75% {
+    background-position: 0% 90%;
+  }
+  99% {
+    background-position: top left;
+  }
+}
+
+@keyframes background {
+  25% {
+    background-position: top right;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  75% {
+    background-position: 0% 90%;
+  }
+  99% {
+    background-position: top left;
+  }
+}
+
+.page-arrows {
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  font-size: 2.5em;
+}
+
+.page-arrows i {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.page-arrows i:hover {
+  background-color: aliceblue;
+}
+
+.master-accom,
+.sub-accom,
+.food,
+.summary,
+.payment {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+}
+/*# sourceMappingURL=style.css.map */
